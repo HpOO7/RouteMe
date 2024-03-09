@@ -1,0 +1,24 @@
+* New Client Organization Setup:
+    * When a new organization joins, we need to set up their account.(Create org Page I think should be handle by technical team and give credentials to the org owner) 
+* User Creation(Inside org):
+        * Two types of users need to be created:
+        * Type 1: Drivers - We'll gather their name, license details, expiration date, and state.
+        * Type 2: Desktop Users - These users won't be driving but will handle vehicle scheduling. 
+* Vehicle Setup:
+        * Define Vehicle Types and Capacities:
+        * We'll categorize vehicles based on their type and determine how many passengers they can carry. For example, some vehicles may accommodate one wheelchair passenger and two regular passengers, or four regular passengers.
+        * Create Vehicles:
+        * We'll input details such as the vehicle's name, license plate number, capacity, login credentials for accessing the vehicle via a mobile app, make, model, color, and year.
+* Route Creation:
+        * This involves planning the routes drivers will take:
+        * Select Vehicle: Choose the vehicle for which we're planning the route.
+        * Choose Driver Schedule: Decide which weekdays the driver will be operating.
+        * Set Dates: Specify the start and end dates for the route.
+        * Determine Starting Location: Determine if the driver will start from a garage or their own location, and set up a pull-out garage location accordingly.
+        * Find Addresses: Locate the addresses on the map for pick-up and drop-off points.
+        * Set Ending Location: Set the pull-in garage location, which is typically the same as the starting location. 
+* Funding Source and Rates:
+        * Managing how trips are funded:
+        * Define Funding Sources: Determine who is paying for the trip.
+        * Create Rate Categories: Establish different rates for billing, such as mileage or hourly charges.
+        * Attach Rates to Funding Sources: Specify the actual values for each rate category, like $1.50 per hour, and associate them with the appropriate funding sources.
