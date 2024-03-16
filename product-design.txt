@@ -1,24 +1,69 @@
-* New Client Organization Setup:
-    * When a new organization joins, we need to set up their account.(Create org Page I think should be handle by technical team and give credentials to the org owner) 
-* User Creation(Inside org):
-        * Two types of users need to be created:
-        * Type 1: Drivers - We'll gather their name, license details, expiration date, and state.
-        * Type 2: Desktop Users - These users won't be driving but will handle vehicle scheduling. 
-* Vehicle Setup:
-        * Define Vehicle Types and Capacities:
-        * We'll categorize vehicles based on their type and determine how many passengers they can carry. For example, some vehicles may accommodate one wheelchair passenger and two regular passengers, or four regular passengers.
-        * Create Vehicles:
-        * We'll input details such as the vehicle's name, license plate number, capacity, login credentials for accessing the vehicle via a mobile app, make, model, color, and year.
-* Route Creation:
-        * This involves planning the routes drivers will take:
-        * Select Vehicle: Choose the vehicle for which we're planning the route.
-        * Choose Driver Schedule: Decide which weekdays the driver will be operating.
-        * Set Dates: Specify the start and end dates for the route.
-        * Determine Starting Location: Determine if the driver will start from a garage or their own location, and set up a pull-out garage location accordingly.
-        * Find Addresses: Locate the addresses on the map for pick-up and drop-off points.
-        * Set Ending Location: Set the pull-in garage location, which is typically the same as the starting location. 
-* Funding Source and Rates:
-        * Managing how trips are funded:
-        * Define Funding Sources: Determine who is paying for the trip.
-        * Create Rate Categories: Establish different rates for billing, such as mileage or hourly charges.
-        * Attach Rates to Funding Sources: Specify the actual values for each rate category, like $1.50 per hour, and associate them with the appropriate funding sources.
+New Client Organization Setup:
+* When a new organization joins, we need to set up their account. The technical team handles this setup and provides login credentials to the organization owner for accessing their account.
+
+User Creation(Inside org):
+    * Two types of users need to be created:
+    * Type 1: Drivers: We'll gather their name, license details, expiration date, and state. These users will be actively operating vehicles within the organization.
+    * Type 2: Desktop Users: These users won't be driving but will handle vehicle scheduling within the organization.
+
+Vehicle Setup:
+    * Define Vehicle Types and Capacities:
+    * We'll categorize vehicles based on their type and determine how many passengers they can carry. For example, some vehicles may accommodate one wheelchair passenger and two regular passengers, or four regular passengers.
+    * Create Vehicles:
+    * We'll input details such as the vehicle's name, license plate number, capacity, login credentials for accessing the vehicle via a mobile app, make, model, color, and year.
+
+Route Creation:
+    * This involves planning the routes drivers will take:
+    * Select Vehicle: Choose the vehicle for which we're planning the route.
+    * Choose Driver Schedule: Decide which weekdays the driver will be operating.
+    * Set Dates: Specify the start and end dates for the route.
+    * Determine Starting Location: Determine if the driver will start from a garage or their own location, and set up a pull-out garage location accordingly.
+    * Find Addresses: Locate the addresses on the map for pick-up and drop-off points.
+    * Set Ending Location: Set the pull-in garage location, which is typically the same as the starting location.
+
+Funding Source and Rates:
+* Funding sources are used to indicate who is PAYING for the trip.
+* Create Category of rate that can be used to bill funding source (mileage-> paid per mile, hour, pickup fee etc).
+* Now attach that rate to a funding source with the actual values (Like 1.50 dollar per hour).
+Create Customer:
+* Define name, age and details.
+* Define space type like( normal or wheel chair etc).
+* Add funding source -> Cash, debit, etc.
+* Address, phone. Geo-code the home address in the map  #NOTE: NOW A TRIP CAN BE CREATED FOR CUSTOMER.
+
+
+Create Trip:
+    * Admin port creates a trip:
+    * Select a customer.
+    * Date of the trip.
+    * Pick add (default of the client address) -> can be altered by desktop user.
+    * Drop of location (add new or use existing location).
+* A user may create re-occurred trips as well, which automatically gets scheduled within a defined interval.
+* As soon as a trip is created, user can update its geo-location through the app.
+
+Common location:
+* A place or tab/ screen to store important location.
+
+Custom imports:
+* Import to excel/csv all trips based on time data/ custom filter. We will think of more filters if needed eg. car type, passenger type.
+
+Edit Trips:
+* Functionality which lets you edit the information from create trip screen. Trip charges can be added as well (we should also maintain the information edit by who and when).
+
+Driver and Route information:
+* What vehicles are available today and if any routes need to be closed for some reason then a desktop may do so.
+
+Where is my ride:
+* If a desktop user wants to know where the ride is, he can do so by getting the driver location.
+
+SCHEDULING:
+* Show the multiple paths to destination address and user may choose between what to choose.
+* Attach route to the trip. 
+
+Driver app:
+* For this, we can refer to the Mediroutes mobile app.
+* Driver can see all the trips assigned to him we will need a UI page for it.
+* Will have a map. Which will have the custom location and driver will click on “arrived button”.
+* Take a signature or OTP verification from the user that driver has arrived.
+* Once ready to click, driver will click on button to start the ride.
+* Google map will show up with the destination location.
